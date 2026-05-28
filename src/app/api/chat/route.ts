@@ -1,14 +1,9 @@
 import { toBaseMessages, toUIMessageStream } from "@ai-sdk/langchain";
-import { ChatOpenAI } from "@langchain/openai";
 import { createUIMessageStreamResponse, UIMessage } from "ai";
 
-export const maxDuration = 30;
+import { model } from "@/agent";
 
-const model = new ChatOpenAI({
-  model: process.env.LLM_MODEL,
-  apiKey: "local",
-  configuration: { baseURL: process.env.LLM_URL },
-});
+export const maxDuration = 30;
 
 export async function POST(req: Request) {
   const { messages }: { messages: UIMessage[] } = await req.json();
