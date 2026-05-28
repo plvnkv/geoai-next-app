@@ -13,3 +13,9 @@ services:
     volumes:
       - ./src:/app/src
       - ./public:/app/public
+    models:
+      - llm
+
+models:
+  llm:
+    model: docker.io/ai/qwen3.5:9B-UD-Q4_K_XL
