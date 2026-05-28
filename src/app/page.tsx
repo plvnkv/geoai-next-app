@@ -1,9 +1,19 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="flex h-screen items-center justify-center">
-      <Button>Get started 🚀</Button>
+      <Link href="/chat">
+        <Button variant="link" className="cursor-pointer">
+          Chat 💬
+        </Button>
+      </Link>
+      <Link href="/langgraph">
+        <Button variant="link" className="cursor-pointer">
+          Agent 🤖
+        </Button>
+      </Link>
     </div>
   );
 }

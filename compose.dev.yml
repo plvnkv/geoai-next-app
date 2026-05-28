@@ -1,4 +1,4 @@
-name: geoai-app
+name: geoai
 
 services:
   app:
