@@ -1,0 +1,17 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "ignorePatterns": [],
+  "sortImports": {
+    "groups": [
+      "builtin", // e.g., node:path, fs
+      "external", // e.g., react, lodash
+      "internal", // e.g., @/utils
+      "parent", // e.g., ../
+      "sibling", // e.g., ./utils
+      "index" // e.g., ./
+    ],
+    "newlinesBetween": true, // Enforce blank lines between distinct groups
+    "sortSideEffects": true, // Sort side-effect imports (e.g., stylesheets) alphabetically
+    "ignoreCase": true // Ignore capitalization when sorting
+  }
+}
